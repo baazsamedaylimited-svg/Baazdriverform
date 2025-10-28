@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baaz Same Day – Driver Application</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+
+    /* Left Side */
+    .left-side {
+      flex: 1;
+      background: linear-gradient(rgba(0, 51, 102, 0.6), rgba(0, 51, 102, 0.6)), 
+                  url('https://baazsameday.co.uk/Content/images/van7.jpg') center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 60px;
+    }
+
+    .left-side h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    .left-side p {
+      font-size: 0.95rem;
+      margin-top: 10px;
+    }
+
+    /* Right Form */
+    .form-container {
+      flex: 1;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      overflow-y: auto;
+      height: 100vh;
+      padding: 40px 20px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 600px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px 25px;
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: #003366;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      border-left: 4px solid #007bff;
+      padding-left: 8px;
+      color: #003366;
+      margin-top: 25px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-top: 15px;
+      display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="file"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    input[type="radio"] {
+      margin-right: 6px;
+    }
+
+    .radio-group {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: linear-gradient(90deg, #007bff, #0056b3);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 30px;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #0056b3, #004099);
+    }
+
+    /* Responsive layout for tablets & mobiles */
+    @media (max-width: 992px) {
+      body {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .left-side {
+        height: 200px;
+        padding: 40px 20px;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .form-container {
+        height: auto;
+        padding: 20px;
+      }
+
+      form {
+        margin: 0 auto;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .left-side h1 {
+        font-size: 1.5rem;
+      }
+
+      .left-side p {
+        font-size: 0.85rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="left-side">
+    <h1>Join <span style="color:#00aaff;">Baaz Same Day</span></h1>
+    <p>Drive with confidence. Deliver with pride. Apply now to become part of our dedicated courier network.</p>
+  </div>
+
+  <div class="form-container">
+    <form action="https://formspree.io/f/xblpdoba" method="POST" enctype="multipart/form-data">
+      <h2>🚚 Driver Application Form</h2>
+
+      <!-- Personal Info -->
+      <h3>Personal Information</h3>
+      <label>Full Name</label>
+      <input type="text" name="Full Name" required>
+
+      <label>Address</label>
+      <input type="text" name="Address" required>
+
+      <label>Contact Number</label>
+      <input type="text" name="Contact Number" required>
+
+      <label>National Insurance Number</label>
+      <input type="text" name="National Insurance Number" required>
+
+      <label>Email</label>
+      <input type="email" name="Email" required>
+
+      <!-- Legal Info -->
+      <h3>Legal Information</h3>
+      <label>Right to work in UK</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Right to work in UK" value="Yes">Yes</label>
+        <label><input type="radio" name="Right to work in UK" value="No">No</label>
+      </div>
+
+      <label>UK Driving Licence</label>
+      <div class="radio-group">
+        <label><input type="radio" name="UK Driving Licence" value="Yes">Yes</label>
+        <label><input type="radio" name="UK Driving Licence" value="No">No</label>
+      </div>
+
+      <label>Upload Supporting PDF (if applicable)</label>
+      <input type="file" name="Licence PDF">
+
+      <label>Points in DVL Summary (Enter if any)</label>
+      <input type="text" name="Points in DVLA Summary">
+
+      <label>Licence Suspended</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Licence Suspended" value="Yes">Yes</label>
+        <label><input type="radio" name="Licence Suspended" value="No">No</label>
+      </div>
+
+      <label>If Yes, how many times?</label>
+      <input type="text" name="Suspension Count">
+
+      <label>Valid DBS Check</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Valid DBS Check" value="Yes">Yes</label>
+        <label><input type="radio" name="Valid DBS Check" value="No">No</label>
+      </div>
+
+      <label>Driving Convictions in last 5 years</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Driving Convictions" value="Yes">Yes</label>
+        <label><input type="radio" name="Driving Convictions" value="No">No</label>
+      </div>
+
+      <!-- Experience -->
+      <h3>Experience and Work Conditions</h3>
+      <label>Previous experience as delivery driver</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Previous Experience" value="Yes">Yes</label>
+        <label><input type="radio" name="Previous Experience" value="No">No</label>
+      </div>
+
+      <label>If Yes, how many years?</label>
+      <input type="text" name="Experience Years">
+
+      <label>Confident using any app or used earlier</label>
+      <textarea name="App Experience" rows="2"></textarea>
+
+      <label>Comfortable with 10–16 hour shifts</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Long Shifts" value="Yes">Yes</label>
+        <label><input type="radio" name="Long Shifts" value="No">No</label>
+      </div>
+
+      <label>Understand weekly pay (1st week in hand)</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Weekly Pay" value="Yes">Yes</label>
+        <label><input type="radio" name="Weekly Pay" value="No">No</label>
+      </div>
+
+      <label>Understand 4 weeks’ notice if leaving</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Notice Period" value="Yes">Yes</label>
+        <label><input type="radio" name="Notice Period" value="No">No</label>
+      </div>
+
+      <!-- Company Standards -->
+      <h3>Company Standards</h3>
+      <label>Will use company app</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Use Company App" value="Yes">Yes</label>
+        <label><input type="radio" name="Use Company App" value="No">No</label>
+      </div>
+
+      <label>Will wear company uniform and PPE</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Uniform PPE" value="Yes">Yes</label>
+        <label><input type="radio" name="Uniform PPE" value="No">No</label>
+      </div>
+
+      <label>Can maintain professional communication</label>
+      <div class="radio-group">
+        <label><input type="radio" name="Professional Communication" value="Yes">Yes</label>
+        <label><input type="radio" name="Professional Communication" value="No">No</label>
+      </div>
+
+      <!-- Final Checks -->
+      <h3>Final Checks</h3>
+      <label>What time can start</label>
+      <input type="text" name="Start Time">
+
+      <label>Any legal/medical issues affecting driving</label>
+      <textarea name="Legal Medical Issues" rows="2"></textarea>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+
+</body>
+</html>
